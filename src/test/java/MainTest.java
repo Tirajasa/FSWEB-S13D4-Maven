@@ -22,7 +22,7 @@ public class MainTest {
     @BeforeEach
     void setUp() {
         point = new Point(6, 5);
-        player = new Player("John", 100, Weapon.SWORD);
+        player = new Player("John", 100, Weapon.getSWORD());
     }
 
     @DisplayName("Point sınıf değişkenleri doğru access modifier a sahip mi ?")
@@ -77,8 +77,8 @@ public class MainTest {
     @DisplayName("Weapon enum değişkenleri doğru tipte mi ?")
     @Test
     public void testWeaponTypesAccessModifiers() throws NoSuchFieldException {
-        assertThat(Weapon.SWORD.getDamage(), instanceOf(Integer.class));
-        assertThat(Weapon.SWORD.getAttackSpeed(), instanceOf(Double.class));
+        assertThat(Weapon.getSWORD().getDamage(), instanceOf(Integer.class));
+        assertThat(Weapon.getSWORD().getAttackSpeed(), instanceOf(Double.class));
     }
 
     @DisplayName("HealthPercentage metodu doğru çalışıyor mu ?")
